@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icu/home_page.dart';
 import 'package:icu/intervals_api.dart';
 import 'package:icu/profile/profile_page.dart';
 
@@ -19,7 +20,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ProfilePage(api: api),
+      home: const SafeArea(
+        child: HomePage(),
+      ),
     );
   }
 }
