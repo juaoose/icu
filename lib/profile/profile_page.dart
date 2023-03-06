@@ -13,7 +13,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Profile")),
+      appBar: AppBar(title: const Text('Profile')),
       body: FutureBuilder<Profile>(
         future: api.getUserProfile('12200411'),
         builder: (context, snapshot) {
@@ -25,7 +25,7 @@ class ProfilePage extends StatelessWidget {
 
           if (snapshot.hasError) {
             return const Center(
-              child: Text("An error ocurred loading this profile."),
+              child: Text('An error ocurred loading this profile.'),
             );
           }
 
