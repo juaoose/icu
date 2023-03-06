@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icu/drawer.dart';
 import 'package:icu/intervals_api.dart';
 import 'package:icu/profile/profile.dart';
 
@@ -13,7 +14,10 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Profile')),
+      appBar: AppBar(
+        title: const Text('Profile'),
+      ),
+      drawer: const NavDrawer(),
       body: FutureBuilder<Profile>(
         future: api.getUserProfile('12200411'),
         builder: (context, snapshot) {
